@@ -1,0 +1,18 @@
+# Use an official WordPress image
+FROM wordpress
+
+# Set the working directory to the WordPress installation
+WORKDIR /var/www/html
+
+# Copy the contents of the current directory to the working directory
+COPY . .
+
+# Expose port 80 to the host
+EXPOSE 3000
+
+# FROM node:18-alpine
+# WORKDIR /app
+# COPY . .
+ RUN yarn install --production
+# CMD ["node", "src/index.js"]
+# EXPOSE 3000 
